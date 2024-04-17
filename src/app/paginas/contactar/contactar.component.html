@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <form (ngSubmit)="guardarContacto()">
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label"><span class="fw-bold">Nombre</span></label>
+            <input type="text" class="form-control" id="exampleInputName" [(ngModel)]="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputApellido" class="form-label"><span class="fw-bold">Apellido</span></label>
+            <input type="text" class="form-control" id="exampleInputApellido" [(ngModel)]="apellido" name="apellido" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputTelefono" class="form-label"><span class="fw-bold">Teléfono</span></label>
+            <input type="tel" class="form-control" id="exampleInputTelefono" [(ngModel)]="telefono" name="telefono" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label"><span class="fw-bold">Correo Electrónico</span></label>
+            <input type="email" class="form-control" id="exampleInputEmail" [(ngModel)]="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-info">Enviar Información</button>
+    </form>
+</div>
