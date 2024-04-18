@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PublicComponent } from './public.component';
+import { PublicaComponent } from './publica.component';
 
-describe('PublicComponent', () => {
-  let component: PublicComponent;
-  let fixture: ComponentFixture<PublicComponent>;
+describe('PublicaComponent', () => {
+  let component: PublicaComponent;
+  let fixture: ComponentFixture<PublicaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PublicComponent]
-    })
+    imports: [PublicaComponent]
+})
     .compileComponents();
     
-    fixture = TestBed.createComponent(PublicComponent);
+    fixture = TestBed.createComponent(PublicaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,8 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Component } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-contactar',
+  standalone: true,
+  imports: [],
+  templateUrl: './contactar.component.html',
+  styleUrl: './contactar.component.css'
 })
+
 export class ContactarComponent {
   private contacts: any[] = [];
 

@@ -9,22 +9,22 @@ import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
 //import { PublicacionComponent } from './paginas/publicacion/publicacion.component';
 //import { PublicComponent } from './paginas/publicacion/public/public.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    InicioComponent,
-    NosotrosComponent,
-    //ContactarComponent,
-    //PublicacionComponent,
-    //PublicComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
-})
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     InicioComponent,
+//     NosotrosComponent,
+//     //ContactarComponent,
+//     //PublicacionComponent,
+//     //PublicComponent
+//   ],
+//   imports: [
+//     BrowserModule,
+//     AppRoutingModule
+//   ],
+//   providers: [
+//     provideClientHydration()
+//   ],
+//   bootstrap: [AppComponent]
+// })
 export class AppModule { }

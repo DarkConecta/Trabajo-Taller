@@ -1,21 +1,22 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConsumirApiService } from '../../servicios/consumir-api.service';
-import { Publicar } from '../../interface/publicar';
-import { Usuarios } from '../../interface/usuarios';
-import { PublicComponent } from "./public/public.component";
+import { publicar } from '../../interface/publicar';
+import { usuario } from '../../interface/usuario';
+import { PublicaComponent } from "./publica/publica.component";
 
 @Component({
   selector: 'app-publicacion',
   standalone: true,
   templateUrl: './publicacion.component.html',
   styleUrl: './publicacion.component.css',
-  imports: [PublicComponent]
+  imports: [PublicaComponent]
 })
+
 export class PublicacionComponent implements OnInit {  // Implementacion de interfaz OnInit
 
   // Esta línea declara una propiedad pública llamada publicaciones que es un arreglo vacío de tipo Publicacion
-  public Publicar: Publicar[] = [];
-  public usuarios: Usuarios[] = [];
+  public publicados: publicar[] = [];
+  public usuarios: usuario[] = [];
   textoBuscado: string = "";
 
   // Este constructor de la clase inyecta el servicio ConsumoApiService y lo almacena en una propiedad privada llamada consumoApiService
@@ -33,7 +34,7 @@ export class PublicacionComponent implements OnInit {  // Implementacion de inte
       .subscribe({  // El método getData devuelve un Observable, por lo que se utiliza subscribe para manejar la respuesta
         next: (res) => {
           // Se actualizan las publicaciones almacenando la respuesta (res) en la propiedad publicaciones
-          this.Publicar = res;
+          this.publicados = res;
         },
         error: (err) => {
           // La función error se ejecuta si ocurre un error al obtener los datos (err)
@@ -56,7 +57,7 @@ export class PublicacionComponent implements OnInit {  // Implementacion de inte
       });
   }
 
-  getUsuarioPorId(userId: number): Usuarios | undefined {
+  getUsuarioPorId(userId: number): usuario | undefined {
     return this.usuarios.find((user) => user.id === userId);
   }
 

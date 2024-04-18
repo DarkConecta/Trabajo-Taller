@@ -8,8 +8,8 @@ describe('InicioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InicioComponent]
-    })
+    imports: [InicioComponent]
+})
     .compileComponents();
     
     fixture = TestBed.createComponent(InicioComponent);

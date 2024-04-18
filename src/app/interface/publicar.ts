@@ -1,4 +1,4 @@
-export interface Publicar {
+export interface publicar {
     userId: number;
     id: number;
     title: string;
